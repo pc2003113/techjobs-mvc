@@ -12,6 +12,30 @@
 
     <!-- TODO #3 - Use the same list display from search.html -->
 
+    <table style="border-collapse: collapse;" >
+        <tr>
+            <th>position type</th>
+            <th>name</th>
+            <th>employer</th>
+            <th>location</th>
+            <th>core competency</th>
+
+        </tr>
+        <tr th:each="job: ${jobs}">
+
+            <td th:each="column: ${job}" width="250" style="border: 1px solid black ;">
+                    <span th:text="${column.value}">
+
+
+                    </span>
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
 </div>
 
 </body>
